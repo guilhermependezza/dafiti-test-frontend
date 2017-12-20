@@ -42,7 +42,7 @@ class User extends Component {
             <section className="user-data">
                 <div className="edit-field">
                     <label className="edit-field__label">User id:</label>
-                    <span className="display-field__value">{this.state.userId}</span>
+                    <span className="display-field__value">{this.state.userData.userId}</span>
                 </div>
                 <div className="edit-field">
                     <label className="edit-field__label">Name:</label>
