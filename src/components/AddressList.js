@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import loadUserData from '../utils/load-user-data'
 import loadAddressList from '../utils/load-address-list'
+import UserDataHeader from './UserDataHeader';
 
 class AddressList extends Component {
     constructor(props) {
@@ -43,7 +44,7 @@ class AddressList extends Component {
     render() {
         return (
             <div>
-                <div className="user-data">{this.state.user.name}</div>
+                <UserDataHeader user={this.state.user} />
                 <div>{this.renderAddressList()}</div>
             </div>
         )
