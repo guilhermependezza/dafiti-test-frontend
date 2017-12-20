@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import UserDataHeader from './UserDataHeader';
+import UserDataHeader from './UserDataHeader'
+import BackToMyAccount from './BackToMyAccount'
 
 import loadUserData from '../utils/load-user-data'
 import loadProducts from '../utils/load-products'
@@ -27,6 +28,7 @@ class Wishlist extends Component {
             <div>
                 <UserDataHeader user={this.state.user} />
                 <div>{this.renderProductList()}</div>
+                <BackToMyAccount />
             </div>
         )
     }
