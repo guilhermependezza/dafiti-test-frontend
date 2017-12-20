@@ -1,5 +1,6 @@
 const endpointsAvailable = {
-    wishlist: 'wishlist'
+    wishlist: 'wishlist',
+    orderHistory: 'order-history'
 }
 
 export default function loadProducts(userId, listType, callback) {
