@@ -7,7 +7,9 @@ import './App.css';
 function App() {
   return (
     <BrowserRouter>
-        <Main />
+        <div className="content">
+          <Main />
+        </div>
     </BrowserRouter>
   );
 }
