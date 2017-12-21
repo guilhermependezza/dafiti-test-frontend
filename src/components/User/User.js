@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import loadUserData from '../utils/load-user-data'
-import './User.css'
+import loadUserData from '../../utils/load-user-data'
 
 
 class User extends Component {
