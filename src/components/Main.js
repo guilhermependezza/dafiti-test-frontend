@@ -4,8 +4,8 @@ import { Switch, Route } from 'react-router-dom';
 
 // Routes components
 import OrderHistory from './OrderHistory';
-import User from './User';
-import AddressList from './AddressList';
+import User from './User/index';
+import AddressList from './AddressList/index';
 import Wishlist from './Wishlist.js';
 
 function Main() {
