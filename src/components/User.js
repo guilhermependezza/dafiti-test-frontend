@@ -51,15 +51,15 @@ class User extends Component {
                 </div>
                 <div className="edit-field">
                     <label className="edit-field__label">Age:</label>
-                    <input type="text" value={this.state.userData.age} onChange={this.onChange.bind(this, 'age')} />
+                    <input type="text" className="edit-field__value" value={this.state.userData.age} onChange={this.onChange.bind(this, 'age')} />
                 </div>
                 <div className="edit-field">
                     <label className="edit-field__label">Phone:</label>
-                    <input type="text" value={this.state.userData.phone} onChange={this.onChange.bind(this, 'phone')} />
+                    <input type="text" className="edit-field__value" value={this.state.userData.phone} onChange={this.onChange.bind(this, 'phone')} />
                 </div>
                 <div className="edit-field">
                     <label className="edit-field__label">e-mail:</label>
-                    <input type="text" value={this.state.userData.email} onChange={this.onChange.bind(this, 'email')} />
+                    <input type="text" className="edit-field__value" value={this.state.userData.email} onChange={this.onChange.bind(this, 'email')} />
                 </div>
                 <div className="actions">
                     <button className="actions__link" href='#' onClick={this.saveButton} >Save user info</button>
