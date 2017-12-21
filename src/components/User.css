@@ -1,0 +1,31 @@
+.display-field {
+    line-height: 1.5em;
+}
+
+.display-field__label {
+    display: inline-block;
+    width: 5em;
+    font-weight: bold;
+}
+
+.actions {
+    padding-top: 5px;
+}
+
+.actions__link {
+    padding: 0 5px;
+    border-right: 2px solid #999;
+    text-decoration: none;
+}
+
+.actions__link:hover {
+    text-decoration: underline;
+}
+
+.actions__link:last-of-type {
+    border-right: none;
+}
+
+.actions__link:first-of-type {
+    padding-left: 0;
+}

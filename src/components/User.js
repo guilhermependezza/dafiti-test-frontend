@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import loadUserData from '../utils/load-user-data'
+import './User.css'
 
 
 class User extends Component {
@@ -118,11 +119,11 @@ class User extends Component {
                     <label className="display-field__label">e-mail:</label>
                     <span className="display-field__value">{email}</span>
                 </div>
+                <button onClick={this.editButton} >Edit user info</button>
                 <div className="actions">
-                    <button href='#' onClick={this.editButton} >Edit user info</button>
-                    <Link to={`/address-list/${userId}`}>View address list</Link>
-                    <Link to={`/wishlist/${userId}`}>Wishlist</Link>
-                    <Link to={`/order-history/${userId}`}>Order history</Link>
+                    <Link className="actions__link" to={`/address-list/${userId}`}>View address list</Link>
+                    <Link className="actions__link" to={`/wishlist/${userId}`}>Wishlist</Link>
+                    <Link className="actions__link" to={`/order-history/${userId}`}>Order history</Link>
                 </div>
             </section>
         )
