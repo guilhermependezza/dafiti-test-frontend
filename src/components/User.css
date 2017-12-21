@@ -1,11 +1,17 @@
-.display-field {
+.display-field,
+.edit-field {
     line-height: 1.5em;
 }
 
-.display-field__label {
+.display-field__label,
+.edit-field__label {
     display: inline-block;
     width: 5em;
     font-weight: bold;
+}
+
+.edit-field__value {
+    width: 20em;
 }
 
 .actions {
