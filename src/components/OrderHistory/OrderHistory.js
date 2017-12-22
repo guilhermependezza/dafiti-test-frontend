@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import UserDataHeader from './UserDataHeader'
-import BackToMyAccount from './BackToMyAccount'
+import UserDataHeader from '../UserDataHeader/index'
+import BackToMyAccount from '../BackToMyAccount'
 
-import loadUserData from '../utils/load-user-data'
-import loadProducts from '../utils/load-products'
+import loadUserData from '../../utils/load-user-data'
+import loadProducts from '../../utils/load-products'
 
 class OrderHistory extends Component {
     constructor(props) {
@@ -38,13 +38,30 @@ class OrderHistory extends Component {
         return data.userId
     }
 
+    renderOrderHistory() {
+        return this.state.productList.map((product, index) =>
+            <div className="order-history-item" key={index}>
+                <div className="order-history-item__image-container">
+                    <img className="order-history-item__image" src={product.image} />
+                    <label className="order-history-item__purchase-date">{product.purchaseDate}</label>
+                </div>
+                <div className="order-history-item__title-container">
+                    <div className="order-history-item__title">
+                        {product.name}
+                    </div>
+                    <div className="order-history-item__description">
+                        {product.description}
+                    </div>
+                </div>
+
+            </div>
+        )
+    }
+
     renderProductList() {
-        console.log(this.state.productList)
         return this.state.productList.length === 0 ?
         <div>Loading...</div> :
-        this.state.productList.map((product, index) =>
-            <div key={index}>{product.name}</div>
-        )
+        this.renderOrderHistory()
     }
 
     handleProductList(data) {

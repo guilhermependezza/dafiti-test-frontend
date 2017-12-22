@@ -1,0 +1,36 @@
+.order-history-item {
+    display: flex;
+}
+
+.order-history-item__image-container {
+    width: 20%;
+    min-width: 200px;
+}
+
+.order-history-item__image {
+    width: 100%;
+    display: block;
+}
+
+.order-history-item__purchase-date {
+    font-size: .8em;
+    line-height: 1.8em;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+}
+
+.order-history-item__title,
+.order-history-item__description {
+    padding: 0 0 5px 15px;
+}
+
+.order-history-item__title {
+    line-height: 1.1em;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.order-history-item__description {
+    text-align: justify;
+}
