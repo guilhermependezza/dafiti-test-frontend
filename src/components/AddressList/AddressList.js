@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import loadUserData from '../../utils/load-user-data'
 import loadAddressList from '../../utils/load-address-list'
-import UserDataHeader from '../UserDataHeader';
+import UserDataHeader from '../UserDataHeader/index';
 import BackToMyAccount from '../BackToMyAccount'
 
 class AddressList extends Component {
