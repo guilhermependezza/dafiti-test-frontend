@@ -42,7 +42,7 @@ class OrderHistory extends Component {
         return this.state.productList.map((product, index) =>
             <div className="order-history-item" key={index}>
                 <div className="order-history-item__image-container">
-                    <img className="order-history-item__image" src={product.image} />
+                    <img alt={product.title} className="order-history-item__image" src={product.image} />
                     <label className="order-history-item__purchase-date">{product.purchaseDate}</label>
                 </div>
                 <div className="order-history-item__title-container">
