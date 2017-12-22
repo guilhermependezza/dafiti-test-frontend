@@ -41,7 +41,7 @@ class Wishlist extends Component {
     renderWishlist() {
         return this.state.productList.map((product, index) =>
             <div className="wishlist-item" key={index}>
-                <img className="wishlist-item__image" src={product.image} />
+                <img alt={product.title} className="wishlist-item__image" src={product.image} />
                 <div className="wishlist-item__title">
                     {product.name}
                 </div>
