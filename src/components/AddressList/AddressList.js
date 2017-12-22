@@ -31,22 +31,42 @@ class AddressList extends Component {
         this.setState({ addressList: data })
     }
 
-    renderAddressList() {
+    renderTableHeader() {
+        return (
+            <thead>
+                <th className="address-list__col">Rua</th>
+                <th className="address-list__col">Número</th>
+                <th className="address-list__col">Cidade</th>
+                <th className="address-list__col">Estado</th>
+            </thead>
+        )
+    }
+
+    renderTableBody() {
         return this.state.addressList.length === 0 ?
             <div>Loading...</div> :
-            this.state.addressList.map((address, index) => (
-                <div key={index} className="address">
-                    <div>{address.street}</div>
-                    <div>{address.number}</div>
-                </div>
-            ))
+            <tbody>
+            {
+                this.state.addressList.map((address, index) => (
+                    <tr className="address-list__row" key={index} className="address">
+                        <td className="address-list__col">{address.street}</td>
+                        <td className="address-list__col">{address.number}</td>
+                        <td className="address-list__col">{address.city}</td>
+                        <td className="address-list__col">{address.state}</td>
+                    </tr>
+                ))
+            }
+            </tbody>
     }
 
     render() {
         return (
             <div>
                 <UserDataHeader user={this.state.user} />
-                <div>{this.renderAddressList()}</div>
+                <table className="address-list">
+                    {this.renderTableHeader()}
+                    {this.renderTableBody()}
+                </table>
                 <BackToMyAccount />
             </div>
         )
