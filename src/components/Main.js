@@ -3,10 +3,10 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 // Routes components
-import OrderHistory from './OrderHistory';
+import OrderHistory from './OrderHistory/index';
 import User from './User/index';
 import AddressList from './AddressList/index';
-import Wishlist from './Wishlist.js';
+import Wishlist from './Wishlist/index';
 
 function Main() {
   return (
