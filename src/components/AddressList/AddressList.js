@@ -48,7 +48,7 @@ class AddressList extends Component {
             <tbody>
             {
                 this.state.addressList.map((address, index) => (
-                    <tr className="address-list__row" key={index} className="address">
+                    <tr className="address-list__row" key={index}>
                         <td className="address-list__col">{address.street}</td>
                         <td className="address-list__col">{address.number}</td>
                         <td className="address-list__col">{address.city}</td>
