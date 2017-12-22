@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import UserDataHeader from './UserDataHeader'
-import BackToMyAccount from './BackToMyAccount'
+import UserDataHeader from '../UserDataHeader'
+import BackToMyAccount from '../BackToMyAccount'
 
-import loadUserData from '../utils/load-user-data'
-import loadProducts from '../utils/load-products'
+import loadUserData from '../../utils/load-user-data'
+import loadProducts from '../../utils/load-products'
 
 class Wishlist extends Component {
     constructor(props) {
@@ -38,13 +38,21 @@ class Wishlist extends Component {
         return data.userId
     }
 
+    renderWishlist() {
+        return this.state.productList.map((product, index) =>
+            <div className="wishlist-item" key={index}>
+                <img className="wishlist-item__image" src={product.image} />
+                <div className="wishlist-item__title">
+                    {product.name}
+                </div>
+            </div>
+        )
+    }
+
     renderProductList() {
-        console.log(this.state.productList)
         return this.state.productList.length === 0 ?
         <div>Loading...</div> :
-        this.state.productList.map((product, index) =>
-            <div key={index}>{product.name}</div>
-        )
+        this.renderWishlist()
     }
 
     handleProductList(data) {

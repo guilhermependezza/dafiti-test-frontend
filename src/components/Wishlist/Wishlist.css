@@ -1,0 +1,14 @@
+.wishlist-item {
+    display: flex;
+    padding-bottom: 10px;
+}
+
+.wishlist-item__image {
+    width: 20%;
+    min-width: 200px;
+    max-height: 200px;
+}
+
+.wishlist-item__title {
+    padding-left: 15px;
+}
