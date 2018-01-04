@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import loadUserData from '../../utils/load-user-data'
+import updateUserData from '../../utils/update-user-data'
 
 
 class User extends Component {
@@ -76,25 +77,16 @@ class User extends Component {
     }
     
     saveButton() {
-        this.updateUserData()
-            .then(res => res.json())
-            .then(res => this.setState({ editing: false }))
+        updateUserData(
+            this.state.userData, 
+            res => this.setState({ editing: false })
+        )
         
     }
 
     cancelButton() {
         loadUserData(this.handleUserData)
         this.setState({ editing: false })
-    }
-
-    updateUserData() {
-        return fetch('http://localhost:3000/user', {
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            method: 'put',
-            body: JSON.stringify(this.state.userData)
-        })
     }
     
     renderDisplayForm() {
